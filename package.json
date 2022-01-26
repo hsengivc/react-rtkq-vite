@@ -6,12 +6,9 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "format": "prettier --write \"src/**/*.ts\" ",
-    "lint": "eslint ./src --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "lint": "eslint ./src --fix",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,scss,less}": [
